@@ -1,0 +1,109 @@
+:root{
+    --color-1:#ffffff;
+    --color-2:#ffffff;
+    --color-3:#ffffff;
+    --color-4:#ffffff;
+    --color-5:#ffffff;
+    --color-6:#ffffff;
+    --color-base: 
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red) no-repeat;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 46, 46);
+    height: 51vh;
+    border: solid 10px rgb(57, 57, 57) ;
+}
+.color__wheel{
+    --width: 349px;
+    --radius: 599px;
+    --cont: calc(360deg / 6);
+    list-style: none;
+    margin: 0;
+    display: block;
+    width: var(--radius);
+    height: var(--radius);
+
+}
+.color--hex{
+    width: var(--width);
+    height: calc(var(--radius) / 2);
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: calc(50% - var(--width) / 2);
+    transform-origin: 50% 100%;
+    background-color: transparent;
+    border-left: calc(var(--width) / 2) solid transparent;
+    border-right: calc(var(--width) / 2) solid transparent;
+    border-top: calc(var(--radius) / 2) solid var(--color-base);
+    text-align: center;
+    margin-top: 25px;
+    transition: border-top-color 0.5s;
+}
+.color--hex:nth-child(1){
+    border-top-color: var(--color-1);
+    transform: rotateZ(calc(1 * var(--cont)));
+}
+.color--hex:nth-child(2){
+    border-top-color: var(--color-2);
+    transform: rotateZ(calc(2 * var(--cont)));
+}
+.color--hex:nth-child(3){
+    border-top-color: var(--color-3);
+    transform: rotateZ(calc(3 * var(--cont)));
+}
+.color--hex:nth-child(4){
+    border-top-color: var(--color-4);
+    transform: rotateZ(calc(4 * var(--cont)));
+}
+.color--hex:nth-child(5){
+    border-top-color: var(--color-5);
+    transform: rotateZ(calc(5 * var(--cont)));
+}
+.color--hex:nth-child(6){
+    border-top-color: var(--color-6);
+    transform: rotateZ(calc(6 * var(--cont)));
+}
+#btn__randomizer{
+    display: flex;
+    position: absolute;
+    border: solid 4px black;
+    border-radius: 25px;
+    text-align: center;
+    background-color: white;
+    padding: 15px;  
+    cursor: pointer;
+    z-index: 1;
+}
+#btn__randomizer:hover{
+    text-decoration: underline solid 0.3px black;
+    text-decoration-style: double;
+}
+#btn__randomizer:active{
+    background-color: black;
+    color: white;
+    border: solid 4px rgb(255, 255, 255);
+}
+.color__id{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    width: var(--width);
+    position: absolute;
+    top: calc(var(--radius) / -2);
+    left: calc(var(--width) / -2);
+    transform: scale(1,1,5);
+    padding-top: 15px;
+    color: white;
+    transition: color 1s;
+}
