@@ -21,7 +21,6 @@ body{
     align-items: center;
     background-color: rgb(47, 46, 46);
     height: 100vh;
-    border: solid 10px rgb(57, 57, 57) ;
 }
 .color__wheel{
     --width: 349px;
@@ -74,14 +73,21 @@ body{
     border-top-color: var(--color-6);
     transform: rotateZ(calc(6 * var(--cont)));
 }
-#btn__randomizer{
+.color__container{
+    display: flex;
+    justify-content: center;
+}
+#btn__randomizer {
     display: flex;
     position: absolute;
+    align-self: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
     border: solid 4px black;
     border-radius: 25px;
     text-align: center;
     background-color: white;
-    padding: 15px;  
+    padding: 15px;
     cursor: pointer;
     z-index: 1;
 }
@@ -97,13 +103,15 @@ body{
 .color__id{
     display: flex;
     justify-content: center;
-    font-size: 12px;
+    font-size: 18px;
     width: var(--width);
     position: absolute;
     top: calc(var(--radius) / -2);
     left: calc(var(--width) / -2);
     transform: scale(1,1,5);
     padding-top: 15px;
-    color: white;
+    color: transparent;
     transition: color 1s;
 }
+
+
