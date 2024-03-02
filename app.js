@@ -73,6 +73,13 @@ function sortColors(colors) {
     });
 }
 
+function swapElements(array, first, second){
+    let temp = array[first];
+    array[first] = array[second];
+    array[second] = temp;
+    return array;
+}
+
 function generateColors() {
     var randomColor = '#' + Math.random().toString(16).substring(2, 8);
     let colors = [];
@@ -93,8 +100,10 @@ function generateColors() {
         colorSpans[i].parentElement.style.borderTopColor = sortedColors[i];
         colorSpans[i].innerHTML = sortedColors[i];
     }
+    
+    sortedColors = swapElements(sortedColors,1,2);
 
-    document.body.style.background = `linear-gradient(45deg, ${sortedColors})`;
+    document.body.style.background = `linear-gradient(315deg, ${sortedColors})`;
 }
 
 generateColors();
