@@ -85,6 +85,7 @@ body{
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: center;
     transform: translate(-50%, -50%);
     border: solid 4px black;
     border-radius: 25px;
