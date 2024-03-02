@@ -77,10 +77,13 @@ body{
     display: flex;
     justify-content: center;
 }
+.btn--container{
+    display: flex;
+    justify-content: center;
+}
 #btn__randomizer {
     display: flex;
-    position: absolute;
-    align-self: center;
+    position: relative;
     justify-content: center;
     transform: translate(-50%, -50%);
     border: solid 4px black;
@@ -90,6 +93,8 @@ body{
     padding: 15px;
     cursor: pointer;
     z-index: 1;
+    height: 3rem;
+    width: 14rem;
 }
 #btn__randomizer:hover{
     text-decoration: underline solid 0.3px black;

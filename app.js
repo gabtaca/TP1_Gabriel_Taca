@@ -8,7 +8,10 @@ const hexToRgb = hex => {
     const b = bigint & 255;
     return `rgb(${r}, ${g}, ${b})`;
 };
-
+//flip le texte dans les color--hex
+document.querySelectorAll('.color--hex:nth-child(2) .color__id, .color--hex:nth-child(3) .color__id, .color--hex:nth-child(4) .color__id').forEach(element => {
+    element.style.transform = 'rotate(180deg)';
+});
 function generateColors() {
     let gradientColors = [];
     colors.forEach((color, index) => {
